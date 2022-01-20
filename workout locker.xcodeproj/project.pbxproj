@@ -16,6 +16,9 @@
 		7C14407527903B5E00098E60 /* workout_lockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14407427903B5E00098E60 /* workout_lockerTests.swift */; };
 		7C14407F27903B5E00098E60 /* workout_lockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14407E27903B5E00098E60 /* workout_lockerUITests.swift */; };
 		7C14408127903B5E00098E60 /* workout_lockerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14408027903B5E00098E60 /* workout_lockerUITestsLaunchTests.swift */; };
+		7C14409027903DB200098E60 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C14408F27903DB200098E60 /* HealthKit.framework */; };
+		7C1440982791E5B100098E60 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1440972791E5B100098E60 /* SegueViewController.swift */; };
+		7C1C4BB827932F09004DAC1D /* HKRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C4BB727932F09004DAC1D /* HKRing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		7C14407A27903B5E00098E60 /* workout lockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "workout lockerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14407E27903B5E00098E60 /* workout_lockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workout_lockerUITests.swift; sourceTree = "<group>"; };
 		7C14408027903B5E00098E60 /* workout_lockerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workout_lockerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7C14408D27903DB200098E60 /* workout locker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "workout locker.entitlements"; sourceTree = "<group>"; };
+		7C14408F27903DB200098E60 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		7C1440972791E5B100098E60 /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		7C1C4BB727932F09004DAC1D /* HKRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKRing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C14409027903DB200098E60 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,7 @@
 				7C14407327903B5E00098E60 /* workout lockerTests */,
 				7C14407D27903B5E00098E60 /* workout lockerUITests */,
 				7C14405B27903B5C00098E60 /* Products */,
+				7C14408E27903DB200098E60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +108,12 @@
 		7C14405C27903B5C00098E60 /* workout locker */ = {
 			isa = PBXGroup;
 			children = (
+				7C14408D27903DB200098E60 /* workout locker.entitlements */,
 				7C14405D27903B5C00098E60 /* AppDelegate.swift */,
 				7C14405F27903B5C00098E60 /* SceneDelegate.swift */,
 				7C14406127903B5C00098E60 /* ViewController.swift */,
+				7C1C4BB727932F09004DAC1D /* HKRing.swift */,
+				7C1440972791E5B100098E60 /* SegueViewController.swift */,
 				7C14406327903B5C00098E60 /* Main.storyboard */,
 				7C14406627903B5D00098E60 /* Assets.xcassets */,
 				7C14406827903B5D00098E60 /* LaunchScreen.storyboard */,
@@ -127,6 +139,14 @@
 			path = "workout lockerUITests";
 			sourceTree = "<group>";
 		};
+		7C14408E27903DB200098E60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C14408F27903DB200098E60 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,8 @@
 			dependencies = (
 			);
 			name = "workout locker";
+			packageProductDependencies = (
+			);
 			productName = "workout locker";
 			productReference = 7C14405A27903B5C00098E60 /* workout locker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,8 @@
 				Base,
 			);
 			mainGroup = 7C14405127903B5C00098E60;
+			packageReferences = (
+			);
 			productRefGroup = 7C14405B27903B5C00098E60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1440982791E5B100098E60 /* SegueViewController.swift in Sources */,
 				7C14406227903B5C00098E60 /* ViewController.swift in Sources */,
 				7C14405E27903B5C00098E60 /* AppDelegate.swift in Sources */,
 				7C14406027903B5C00098E60 /* SceneDelegate.swift in Sources */,
+				7C1C4BB827932F09004DAC1D /* HKRing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,16 +463,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "workout locker/workout locker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6K9W452PU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workout locker/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동시간 확인을 위해 권한 허용이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +485,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,16 +494,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "workout locker/workout locker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6K9W452PU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workout locker/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동시간 확인을 위해 권한 허용이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

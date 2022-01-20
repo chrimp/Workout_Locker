@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="njW-5L-eh5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,164 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="workout_locker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVH-hi-dCQ">
+                                <rect key="frame" x="354" y="78" width="60" height="47.5"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gear" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="28" scale="default"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="b2c-nt-zpV" kind="presentation" identifier="seguetosettings" id="1iy-tj-TUv"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="I7Q-EO-g11">
+                                <rect key="frame" x="-10" y="445" width="434" height="512"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xq-Kj-pUd">
+                                <rect key="frame" x="87" y="217" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4xq-Kj-pUd" secondAttribute="height" multiplier="1:1" id="z6I-GD-TZa"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4mp-Gb-6JE" kind="embed" identifier="hostVCSG" destinationCreationSelector="ringView:" id="5ex-qn-Ctn"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-x2-3vE" userLabel="TentaAPImissing">
+                                <rect key="frame" x="95.5" y="791.5" width="223" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tenta API 코드가 없습니다." cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseForegroundColor" name="TextColor"/>
+                                    <color key="baseBackgroundColor" name="TextBG"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kBL-x2-3vE" secondAttribute="bottom" constant="35" id="5b7-1z-Y2E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xq-Kj-pUd" secondAttribute="trailing" constant="87" id="7KU-cD-hDI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="I7Q-EO-g11" secondAttribute="leading" constant="10" id="7h5-QO-IoR"/>
+                            <constraint firstItem="kBL-x2-3vE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JTS-ze-PPu"/>
+                            <constraint firstItem="4xq-Kj-pUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="MCS-Pn-BdO"/>
+                            <constraint firstItem="I7Q-EO-g11" firstAttribute="centerX" secondItem="4xq-Kj-pUd" secondAttribute="centerX" id="QFI-SP-Qtf"/>
+                            <constraint firstItem="I7Q-EO-g11" firstAttribute="top" secondItem="4xq-Kj-pUd" secondAttribute="bottom" constant="-12" id="S8n-M4-jZW"/>
+                            <constraint firstItem="tVH-hi-dCQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-10" id="SjU-uY-HW3"/>
+                            <constraint firstItem="4xq-Kj-pUd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VRZ-1Z-0H0"/>
+                            <constraint firstItem="4xq-Kj-pUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="cn4-gv-o9F"/>
+                            <constraint firstItem="I7Q-EO-g11" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="jMm-Uv-wol"/>
+                            <constraint firstItem="I7Q-EO-g11" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="95" id="jyV-iE-Bba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tVH-hi-dCQ" secondAttribute="trailing" id="pGz-Ut-8HG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="q2Q-Go-Jvu"/>
+                    <connections>
+                        <outlet property="missingbtnconst" destination="5b7-1z-Y2E" id="DMZ-yQ-bJB"/>
+                        <outlet property="tentaAPImissing" destination="kBL-x2-3vE" id="V4X-nx-eC5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="109.15178571428571"/>
+        </scene>
+        <!--Segue View Controller-->
+        <scene sceneID="vnw-KU-i1W">
+            <objects>
+                <viewController id="b2c-nt-zpV" customClass="SegueViewController" customModule="workout_locker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oYn-mh-MdK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="KdQ-oZ-WAS">
+                                <rect key="frame" x="25" y="50" width="189" height="72.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTS - V2 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAQ-Vd-zV7">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOf-FQ-y6Z" userLabel="tentaAPIAddr_field">
+                                        <rect key="frame" x="0.0" y="38.5" width="129" height="34"/>
+                                        <color key="backgroundColor" name="Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no"/>
+                                        <connections>
+                                            <action selector="updateTentaAddr" destination="b2c-nt-zpV" eventType="editingDidEnd" id="rTy-6p-g1k"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="kOf-FQ-y6Z" secondAttribute="trailing" constant="60" id="uo6-27-1uW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rOQ-tN-ZhP"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstItem="KdQ-oZ-WAS" firstAttribute="top" secondItem="rOQ-tN-ZhP" secondAttribute="top" constant="50" id="IaS-1I-9b6"/>
+                            <constraint firstItem="rOQ-tN-ZhP" firstAttribute="trailing" secondItem="KdQ-oZ-WAS" secondAttribute="trailing" constant="200" id="foa-aP-lpD"/>
+                            <constraint firstItem="KdQ-oZ-WAS" firstAttribute="leading" secondItem="rOQ-tN-ZhP" secondAttribute="leading" constant="25" id="wB0-Hh-CQO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kp8-qg-WDf"/>
+                    <connections>
+                        <outlet property="tentaAPIAddr_field" destination="kOf-FQ-y6Z" id="nCG-ep-E1C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQw-G1-KXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fwg-3W-G43">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="njW-5L-eh5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rFe-W2-bOH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jKo-mO-Kj1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIV-Xm-O7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.15178571428571"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="ETX-5n-Tgb">
+            <objects>
+                <hostingController id="4mp-Gb-6JE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbc-FF-Urb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="-458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="512" height="512"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <namedColor name="AccentColor">
+            <color red="0.18431372549019609" green="0.22745098039215686" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="0.82745098039215681" green="0.89411764705882357" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextBG">
+            <color red="0.57647058823529407" green="1" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
